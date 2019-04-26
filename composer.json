@@ -1,9 +1,10 @@
 {
-  "name": "fusioneng/publishing-checklist",
+  "name": "humanmade/publishing-checklist",
+  "description": "Publishing Checklist",
   "authors": [
     {
-      "name": "Fusion Engineering",
-      "email": "tech@fusion.net"
+      "name": "Human Made",
+      "email": "hello@hmn.md"
     }
   ],
   "require-dev": {
