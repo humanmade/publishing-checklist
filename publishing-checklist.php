@@ -193,13 +193,14 @@ class Publishing_Checklist {
 	 * Customize columns on the "Manage Posts" views
 	 */
 	public function filter_manage_posts_columns( $columns ) {
-
+		global $post_type;
+		$current_post_type = empty( get_post_type() ) ? $post_type : get_post_type();
 		foreach ( $this->tasks as $task_id => $task ) {
 			if ( ! is_callable( $task['callback'] ) ) {
 				unset( $this->tasks[ $task_id ] );
 			}
 
-			if ( ! empty( $task['post_type'] ) && ! in_array( get_post_type(), $task['post_type'], true ) ) {
+			if ( ! empty( $task['post_type'] ) && ! in_array( $current_post_type, $task['post_type'], true ) ) {
 				unset( $this->tasks[ $task_id ] );
 			}
 		}
