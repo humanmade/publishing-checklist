@@ -1,12 +1,16 @@
 {
   "name": "humanmade/publishing-checklist",
   "description": "Publishing Checklist",
+  "type": "wordpress-plugin",
   "authors": [
     {
       "name": "Human Made",
       "email": "hello@hmn.md"
     }
   ],
+  "require": {
+    "composer/installers": "~1.0"
+  },
   "require-dev": {
     "wp-coding-standards/wpcs": "dev-develop"
   },
